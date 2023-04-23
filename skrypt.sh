@@ -60,7 +60,7 @@ for (( i=1; i<=$#; i++ )); do
                     mkdir 'repo';
             fi;
             cd repo;
-            repo_url="https://github.com/WiktorDabrowa/lab3";
+            repo_url="https://github.com/WiktorDabrowa/lab4";
             git clone "$repo_url" "$PWD";
             export PATH="$PWD:$PATH";
             ;;
@@ -71,7 +71,7 @@ for (( i=1; i<=$#; i++ )); do
                 mkdir 'repo';
             fi
             cd repo;
-            repo_url="https://github.com/WiktorDabrowa/lab3";
+            repo_url="https://github.com/WiktorDabrowa/lab4";
             git clone "$repo_url" "$PWD";
             export PATH="$PWD:$PATH";
 
