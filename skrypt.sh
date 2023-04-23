@@ -42,7 +42,15 @@ for (( i=1; i<=$#; i++ )); do
                         date >> "log$i.txt" 
                     done
             fi
-            
+            ;;
+        --help)
+            echo 'Current flags:'
+            echo ' --date : display current date ';
+            echo ' --logs : ';
+            echo '      - with integer argument: creates provided amount of log files';
+            echo '      - without argument: creates 100 log files'
+            echo ' --help : this command'
+
             ;;
     esac 
 done
