@@ -2,10 +2,10 @@
 
 for (( i=1; i<=$#; i++ )); do
     case "${!i}" in
-        --date)
+        --date | -d)
             date
             ;;
-        --logs)
+        --logs | -l)
             next_arg=$((i+1))
             # check if next argument exist:
             if (( $next_arg <= $# ))
@@ -43,14 +43,20 @@ for (( i=1; i<=$#; i++ )); do
                     done
             fi
             ;;
-        --help)
+        --help | -h)
             echo 'Current flags:'
-            echo ' --date : display current date ';
-            echo ' --logs : ';
+            echo ' --date | -d : display current date ';
+            echo ' --logs | -l : ';
             echo '      - with integer argument: creates provided amount of log files';
             echo '      - without argument: creates 100 log files'
-            echo ' --help : this command'
+            echo ' --help | -h: this command'
 
             ;;
+        --init | -i)
+            cd repo;
+            echo $PWD;
+            repo_url="https://github.com/WiktorDabrowa/lab3";
+            git clone "$repo_url" "$PWD";
+
     esac 
 done
